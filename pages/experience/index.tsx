@@ -11,7 +11,7 @@ export default function Experience() {
 					<h2 className="mb-0 mt-2">MEng Computer Science with Artifical Intelligence</h2>
 					<h3><b>University of York</b> <i>2018 - 2023</i></h3>
 					<h3><b>Grade: First Class</b></h3>
-					<div>
+					<div className="pl-3">
 						<ul>
 							<li>Year 1: Upper Second Class</li>
 							<li>Year 2: First Class</li>
