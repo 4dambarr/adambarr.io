@@ -25,7 +25,7 @@ const projects = [
 		description: 'I lead a project to deliver a new website for the lemon press, a satirical magazine at the University of York'
 	}
 ]
-//TO DO: FILTER BY TECH
+
 export default function Projects() {
 	const [technologies, setTechnologies] = useState<string[]>([]);
 	const [filterValues, setFilterValues] = useState<string[]>([]);
@@ -88,10 +88,13 @@ export default function Projects() {
 				});
 				if (filterValues.length == 0 || commonElements.length > 0) {
 					return (
-						<div key={key}>
-							<h2 className="mb-0">{project.name}</h2>
-							{project.link ? <h3><a href={project.link}>{project.link}</a></h3> : ''}
-							<h3><i>{project.technologies.join(', ')}</i></h3>
+						<div key={key} className="w-full">
+							<h2 className="mb-1">{project.name}</h2>
+							{project.link ? <h3 className="my-2"><a href={project.link} className="text-wrap break-all">
+								{project.link}
+								</a></h3> 
+								: ''}
+							<h3 className="my-2 font-semibold"><i>{project.technologies.join(', ')}</i></h3>
 							<p>{project.description}</p>
 						</div>
 					)

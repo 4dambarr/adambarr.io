@@ -72,7 +72,7 @@ export default function Page({ postData, previousPost, nextPost }: Props) {
           <h3 className=''>{postData.date}</h3>
           {
             postData.image != null ?
-              <div className='w-[60vw] max-w-[750px] h-[400px] max-h=[750px] relative m-5'>
+              <div className='w-[90vw] h-[90vw] max-h-[300px] md:w-[60vw] md:max-w-[750px] md:h-[400px] md:max-h-[750px] relative m-5'>
                 <Image src={postData.image}
                   alt={postData.imageDescription || 'No image description provided'}
                   layout="fill"
@@ -81,7 +81,7 @@ export default function Page({ postData, previousPost, nextPost }: Props) {
               </div>
               : ''
           }
-          <p className='italic w-[80%] text-center'>{postData.imageDescription}</p>
+          <p className='italic w-[95vw] md:w-[80%] text-center'>{postData.imageDescription}</p>
         </div>
         <div dangerouslySetInnerHTML={postData.contentHtml} />
       </div>
