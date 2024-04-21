@@ -1,0 +1,19 @@
+- name: Add PR Comment
+uses: mshick/add-pr-comment@v2.8.2
+
+on:
+  pull_request:
+
+env:
+  BRANCH_NAME: ${{ github.head_ref || github.ref_name }} 
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - uses: mshick/add-pr-comment@v2
+        with:
+          message: |
+            Preview available at https://$BRANCH_NAME.adambarr-io.pages.dev
