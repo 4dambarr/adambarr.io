@@ -1,0 +1,8 @@
+name: Empty Action
+run-name: ${{ github.actor }} is doing something!
+on: pull_request
+jobs:
+  Doing-Nothing:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "This action does not do anything other than echo this but I seem to need the workflows folder for the cloudfare pages preview to work so I'm leaving it here!"

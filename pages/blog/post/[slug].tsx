@@ -62,7 +62,7 @@ export default function Page({ postData, previousPost, nextPost }: Props) {
   return (
     <div className='w-full flex flex-col items-center my-6'>
       <div className="w-[85vw] max-w-[1050px]">
-        <Link href='/blog' className='no-underline hover:bg-transparent'>
+        <Link href='/blog' className='mb-2 md:mb-0 no-underline hover:bg-transparent'>
           <IoArrowBack className='text-xl' />
         </Link>
       </div>
