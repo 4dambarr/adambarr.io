@@ -1,0 +1,8 @@
+name: Keep this action
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: pull_request
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "This action does not do anything other than echo this but I seem to need the workflows folder for the cloudfare pages preview to work so I'm leaving it here!"
