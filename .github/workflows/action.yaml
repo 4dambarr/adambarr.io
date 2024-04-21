@@ -1,5 +1,5 @@
 name: Keep this action
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+run-name: ${{ github.actor }} is doing something!
 on: pull_request
 jobs:
   Explore-GitHub-Actions:
