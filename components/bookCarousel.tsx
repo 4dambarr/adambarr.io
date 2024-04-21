@@ -65,7 +65,7 @@ export function BookCarousel() {
 			{
 				bookList.map((book, index) => {
 					if (index == focus) {
-						return <div className="flex flex-col items-center px-4">
+						return <div className="flex flex-col items-center px-4" key={index}>
 						<div className="w-[140px] h-[224px] md:w-[200px] md:h-[320px] relative mx-5">
 							<Image src={'/bookcovers/' + book.image}
 								alt={book.name + ' book cover'}
@@ -77,7 +77,7 @@ export function BookCarousel() {
 					} 
 
 					if (index == focus + 1 || index == focus - 1) {
-						return <div>
+						return <div key={index}>
 						<div className="w-[100px] h-[160px] md:w-[170px] md:h-[272px] relative mx-5">
 							<Image src={'/bookcovers/' + book.image}
 								alt={book.name + ' book cover'}
@@ -88,7 +88,7 @@ export function BookCarousel() {
 					</div>
 					} 
 					
-					return <div>
+					return <div key={index}>
 					<div className="w-[100px] h-[160px] md:w-[140px] md:h-[224px] relative mx-5">
 						<Image src={'/bookcovers/' + book.image}
 							alt={book.name + ' book cover'}

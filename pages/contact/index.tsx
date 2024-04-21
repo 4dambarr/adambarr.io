@@ -4,9 +4,9 @@ export default function Contact() {
 			<div className="flex flex-col items-center w-[80vw] max-w-[1000px]">
 				<h1>Contact Me</h1>
 				<p className="text-center">
-					I'm always open for a conversation, about technology, Stoke City, or anything!
+					I&apos;m always open for a conversation, about technology, Stoke City, or anything!
 					Feel free to contact me using any of the methods below (as a word warning, my conversations 
-					about Stoke City aren't normally very happy 🙁).
+					about Stoke City aren&apos;t normally very happy 🙁).
 				</p>
 				<h2 className="mt-20 font-bold text-l">
 						Email

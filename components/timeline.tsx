@@ -47,14 +47,14 @@ export default function Timeline() {
 				</div>
 			</div>
 			<div className="w-full">
-				{experience.map(company => (
-					<div className="my-10">
+				{experience.map((company, key) => (
+					<div className="my-10" key={key}>
 						<h2 className="mb-0">
 							<a className="no-underline hover:underline" href={company.url}>{company.name}</a>
 						</h2>
 						<h3>{company.location}</h3>
-						{company.positions.map(position => {
-							return <div className="relative">
+						{company.positions.map((position, key) => {
+							return <div className="relative"key={key}>
 								<h3><b>{position.jobTitle}</b></h3>
 								<h3 className="mb-1"><i>{position.dates}</i></h3>
 								<p>{position.description}</p>

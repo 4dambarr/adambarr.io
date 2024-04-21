@@ -34,8 +34,8 @@ export default function Blog({ allPosts }: Props) {
 				</a>
 				<div className="flex flex-col items-start relative w-full">
 					{
-						allPosts.slice(1).map(post => {
-							return <div className="flex flex-start items-center my-6 group">
+						allPosts.slice(1).map((post,key) => {
+							return <div className="flex flex-start items-center my-6 group" key={key}>
 								<a className="hover:bg-transparent" href={PostBase + post.slug}>
 									<div className="relative h-[150px] w-[250px]">
 										<Image

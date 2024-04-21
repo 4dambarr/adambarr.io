@@ -39,7 +39,6 @@ export default function Home({posts} : Props) {
     } else {
       setTypingFontSize('1em');
     }
-    console.log(typingFontSize);
   }, [size]);
 
   return (
@@ -59,8 +58,8 @@ export default function Home({posts} : Props) {
       <div className="flex justify-center w-full">
         <div className={`flex justify-around items-center w-[80vw] max-w-[1000px] flex-col lg:flex-row`}>
           {
-            posts.map((post) => (
-              <IndexBlogCard title={post.title} slug={post.slug} image={post.image}/>
+            posts.map((post, key) => (
+              <IndexBlogCard title={post.title} slug={post.slug} image={post.image} key={key}/>
             ))
           }
         </div>

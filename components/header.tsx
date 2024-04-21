@@ -3,6 +3,7 @@ import HeaderLink from "./headerLink"
 import { useEffect, useState } from "react";
 import MobileHeaderLink from "./mobileHeaderLink";
 import { useWindowSize } from "@/lib/mediaQuerys";
+import Link from "next/link";
 
 interface Props {
 	currentPage: string
@@ -28,9 +29,9 @@ export default function Header({currentPage} : Props) {
 						</HeaderLink>
 					</div>
 					<div className="font-KodeMono text-2xl font-bold ">
-						<a className="no-underline hover:bg-transparent" href="/">
+						<Link className="no-underline hover:bg-transparent" href="/">
 							Adam Barr (.io)
-						</a>
+						</Link>
 					</div>
 					<div className="flex justify-around w-96">
 						<HeaderLink link="/blog" currentPage={currentPage}>
@@ -48,9 +49,9 @@ export default function Header({currentPage} : Props) {
 			<div className="relative">
 				<div className="w-full flex justify-between items-center p-4">
 					<div className="font-KodeMono text-2xl font-bold ">
-						<a className="no-underline hover:bg-transparent" href="/">
+						<Link className="no-underline hover:bg-transparent" href="/">
 							Adam Barr (.io)
-						</a>
+						</Link>
 					</div>
 					<div className="text-4xl hover:cursor-pointer p-2" onClick={() => setShowDropdown(!showDropdown)} >
 						{showDropdown ? <IoClose /> : <IoMenuSharp />}

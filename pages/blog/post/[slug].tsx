@@ -6,6 +6,7 @@ import type {
   GetStaticPaths,
 } from 'next'
 import Image from 'next/image';
+import Link from 'next/link';
 import { useEffect } from 'react'
 import { IoArrowBack } from "react-icons/io5";
 
@@ -14,7 +15,7 @@ export const getStaticPaths = (async () => {
 
   return {
     paths: postData.map(post => ({ params: { slug: post.slug } })),
-    fallback: true,
+    fallback: false,
   }
 }) satisfies GetStaticPaths
 
@@ -56,14 +57,14 @@ export default function Page({ postData, previousPost, nextPost }: Props) {
     console.log(postData);
     console.log(postData.title);
     console.log(Object.keys(postData));
-  }, [])
+  }, [postData])
 
   return (
     <div className='w-full flex flex-col items-center my-6'>
       <div className="w-[85vw] max-w-[1050px]">
-        <a href='/blog' className='no-underline hover:bg-transparent'>
+        <Link href='/blog' className='no-underline hover:bg-transparent'>
           <IoArrowBack className='text-xl' />
-        </a>
+        </Link>
       </div>
       <div className="w-[80vw] max-w-[1000px]">
         <div className='flex flex-col items-center '>

@@ -17,7 +17,7 @@ export default function MyMap() {
 		</Marker>
 		<Marker position={[51.51832527010092, -0.17626420310865168]}>
 			<Popup>
-				I currently live in London and work for Alpha Group in Paddington. I am new to London, the city still feels big and very busy, but I'm slowly finding my feet.
+				I currently live in London and work for Alpha Group in Paddington. I am new to London, the city still feels big and very busy, but I&apos;m slowly finding my feet.
 			</Popup>
 		</Marker>
 		<Marker position={[53.9469282947864, -1.0308133715141805]}>

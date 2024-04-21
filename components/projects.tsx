@@ -59,20 +59,22 @@ export default function Projects() {
 			<p className="m-0">Filters:</p>
 			<div className="flex justify-start flex-wrap">
 				{
-					filterValues.map(technology => {
+					filterValues.map((technology, key) => {
 						return <div
 							className="border-2 px-2 py-1 mx-1 my-1 border-black rounded-full bg-secondary hover:bg-red-400 hover:cursor-pointer"
 							onClick={() => removeFilterValue(technology)}
+							key={key}
 						>
 							{technology}
 						</div>
 					})
 				}
 				{
-					technologies.map(technology => {
+					technologies.map((technology, key) => {
 						return <div
 							className="border-2 px-2 py-1 mx-1 my-1 border-black rounded-full hover:bg-secondary hover:cursor-pointer"
 							onClick={() => addFilterValue(technology)}
+							key={key}
 						>
 							{technology}
 						</div>
@@ -80,13 +82,13 @@ export default function Projects() {
 				}
 			</div>
 
-			{projects.map(project => {
+			{projects.map((project, key) => {
 				var commonElements = filterValues.filter(val => {
 					return project.technologies.indexOf(val) > -1;
 				});
 				if (filterValues.length == 0 || commonElements.length > 0) {
 					return (
-						<div>
+						<div key={key}>
 							<h2 className="mb-0">{project.name}</h2>
 							{project.link ? <h3><a href={project.link}>{project.link}</a></h3> : ''}
 							<h3><i>{project.technologies.join(', ')}</i></h3>
