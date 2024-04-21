@@ -20,7 +20,7 @@ const projects = [
 	},
 	{
 		name: 'The Lemon Press Webiste',
-		link: 'https://github.com/yordevs/yordle',
+		link: 'https://github.com/LemonPressYork/website',
 		technologies: ['React', 'TypeScript', 'Wordpress', 'Gatsby'],
 		description: 'I lead a project to deliver a new website for the lemon press, a satirical magazine at the University of York'
 	}
